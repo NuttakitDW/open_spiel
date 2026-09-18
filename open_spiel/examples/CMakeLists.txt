@@ -7,6 +7,12 @@ add_test(cfr_example_test cfr_example)
 if (OPEN_SPIEL_BUILD_WITH_ACPC)
 add_executable(universal_poker_mccfr_acpc_gamedef_example universal_poker_mccfr_acpc_gamedef_example.cc ${OPEN_SPIEL_OBJECTS})
 add_test(universal_poker_mccfr_acpc_gamedef_example_test universal_poker_mccfr_acpc_gamedef_example)
+
+add_executable(hu_limit_bot hu_limit_bot.cc hu_limit_bot_game.cc
+               ${OPEN_SPIEL_OBJECTS})
+add_executable(hu_limit_bot_test hu_limit_bot_test.cc hu_limit_bot_game.cc
+               ${OPEN_SPIEL_OBJECTS})
+add_test(hu_limit_bot_test hu_limit_bot_test)
 endif()
 
 add_executable(cfr_multi_equilibria_example cfr_multi_equilibria_example.cc
