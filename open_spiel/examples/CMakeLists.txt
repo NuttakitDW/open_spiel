@@ -13,6 +13,9 @@ add_executable(hu_limit_bot hu_limit_bot.cc hu_limit_bot_game.cc
 add_executable(hu_limit_bot_test hu_limit_bot_test.cc hu_limit_bot_game.cc
                ${OPEN_SPIEL_OBJECTS})
 add_test(hu_limit_bot_test hu_limit_bot_test)
+
+add_executable(arena_model_export arena_model_export.cc hu_limit_bot_game.cc
+               ${OPEN_SPIEL_OBJECTS})
 endif()
 
 add_executable(cfr_multi_equilibria_example cfr_multi_equilibria_example.cc
